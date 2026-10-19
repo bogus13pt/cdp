@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/cdp.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<title>Jogada “Punho” · Três variações</title>
+</head>
+<body>
+<main id="jogada"></main>
+<script>
+const V23={h:'Variações 2 e 3 · 3.º',c:'1 passa a 4 no canto; 3 sai do cotovelo e mergulha para dentro do garrafão.',a:[{p:4,t:[0,.5]},{m:3,to:[195,110],t:[.3,1]}]};
+window.JOGADA={
+titulo:'Jogada “Punho” · Três variações',
+intro:'Jogada de ataque organizado com bola na ala esquerda. O 2 faz dois bloqueios seguidos, para o 3 e depois para o 5, e o 3 acaba no cotovelo. As três variações diferem no caminho da bola até à finalização.',
+inicio:{bola:1,c:'1 com bola na ala esquerda, 2 no topo, 3 na ala direita, 4 e 5 nos cantos.',pos:{1:[75,208],2:[199,234],3:[304,211],4:[45,83],5:[343,72]}},
+fases:[
+{h:'1.º',c:'2 bloqueia 3, que contorna por baixo e sobe ao cotovelo direito, na linha de lance livre.',a:[{m:2,to:[296,221],t:[0,.4],s:1},{m:3,to:[218,157],c:[262,305],t:[.35,1]}]},
+{h:'2.º',c:'2 desce e bloqueia 5 no canto; 5 sai para a ala direita e 2 fica no canto.',a:[{m:2,to:[345,82],t:[0,.45],s:1},{m:5,to:[312,215],t:[.4,1]}]}
+],
+perguntaAlternativas:'Variação a jogar',
+alternativas:[
+{rotulo:'V1 · 3 finaliza',h:'Variação 1 · Finalização',c:'1 passa a 3 no cotovelo, que finaliza: lança de meia distância ou, se o defensor fechar, ataca o cesto.',a:[{p:3,t:[0,.45]},{p:'B',c:[205,100],t:[.55,1]}]},
+{rotulo:'V2 · 3 por dentro',passos:[V23,{h:'Variação 2 · Finalização',c:'4 passa a 3 dentro do garrafão, que finaliza junto ao cesto.',a:[{p:3,t:[0,.5]},{p:'B',t:[.6,1]}]}]},
+{rotulo:'V3 · 2 de 3',passos:[V23,{h:'Variação 3 · Finalização',c:'4 passa a 3 dentro do garrafão; a ajuda fecha em 3, que passa a 2 no canto. 2 lança de três.',a:[{p:3,t:[0,.4]},{p:2,t:[.45,.7]},{p:'B',c:[290,0],t:[.75,1]}]}]}
+],
+resumo:[
+'2 bloqueia 3, que contorna por baixo e sobe ao cotovelo direito.',
+'2 desce e bloqueia 5 no canto; 5 sai para a ala e 2 fica no canto.',
+'Variação 1: 1 passa directamente a 3 no cotovelo, que finaliza.',
+'Variação 2: 1 passa a 4 no canto, 3 mergulha no garrafão e 4 passa-lhe para finalizar.',
+'Variação 3: igual à 2, mas 3 passa a 2 no canto para lançamento de três.'
+]};
+</script>
+<script src="assets/motor.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/cdp.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<title>Jogada 1 · Reposição na linha de fundo</title>
+</head>
+<body>
+<main id="jogada"></main>
+<script>
+window.JOGADA={
+titulo:'Jogada 1 · Reposição na linha de fundo',
+intro:'Jogada para concretização rápida, com hipótese de lançamento de três. 4 e 5 são os jogadores mais altos ou mais pesados; 3 é o melhor lançador.',
+inicio:{bola:1,c:'1 repõe na linha de fundo. 4 e 3 junto ao cesto, 5 e 2 mais acima, dos dois lados do garrafão.',pos:{1:[143,8],2:[238,136],3:[238,89],4:[156,89],5:[156,136]}},
+fases:[
+{h:'Fase 1',c:'4 e 5 juntam-se junto à “caixinha”; 3 corre pelo espaço entre os dois. 4 e 5 deixam passar 3, mas não o seu defensor.',a:[{m:4,to:[162,100],t:[0,.35],s:1},{m:5,to:[162,124],t:[0,.35],s:1},{m:3,to:[49,108],c:[160,114],t:[.3,1]}]},
+{h:'Fase 2',c:'4 desfaz o bloqueio para o cesto, 5 para o topo da área restritiva, e 2 sobe para junto do cesto.',a:[{m:4,to:[164,58],t:[0,.8]},{m:5,to:[181,175],t:[0,1]},{m:2,to:[231,61],t:[0,.9]}]}
+],
+perguntaAlternativas:'Quatro opções de passe para 1 (quem repõe)',
+alternativas:[
+{rotulo:'3 lança de 3',h:'Alternativa 1 · Tempo curto',c:'Quando o tempo está curto e é preciso marcar três pontos, 1 passa a 3, que lança de três.',a:[{p:3,t:[0,.5]},{p:'B',c:[110,5],t:[.6,1]}]},
+{rotulo:'Extra passe 2',passos:[
+{h:'Alternativa 2 · Troca defensiva',c:'Se a defesa trocar ou 3 estiver apertado, 3 passa a 5; 2 abre para o canto direito.',a:[{p:3,t:[0,.4]},{m:2,to:[350,70],t:[.3,1]},{p:5,t:[.45,.8]}]},
+{h:'Alternativa 2 · Extra passe',c:'1 entra em campo; 5 faz o passe extra a 2, que lança de três.',a:[{m:1,to:[239,88],t:[0,.6]},{p:2,t:[0,.45]},{p:'B',c:[290,0],t:[.55,1]}]}]},
+{rotulo:'4 junto ao cesto',h:'Alternativa 3 · Passe interior',c:'O defensor do 4 fica preso no bloqueio. 1 passa directamente a 4, que finaliza junto ao cesto.',a:[{p:4,t:[0,.5]},{p:'B',t:[.6,1]}]},
+{rotulo:'2 junto ao cesto',h:'Alternativa 4 · Lado direito',c:'A defesa concentra-se em 3 e 4. 1 passa a 2, que subiu para junto do cesto e finaliza.',a:[{p:2,t:[0,.5]},{p:'B',t:[.6,1]}]},
+{rotulo:'5 alto-baixo',h:'Alternativa 5 · Proposta',c:'1 passa a 5 no topo da área restritiva; 5 passa a 4, que sela o defensor junto ao cesto e finaliza.',a:[{p:5,t:[0,.45]},{p:4,t:[.5,.75]},{p:'B',t:[.8,1]}]}
+],
+resumo:[
+'4 e 5 juntam-se junto à “caixinha” e 3 passa entre os dois; os defensores ficam presos.',
+'4 desfaz para o cesto, 5 para o topo da área restritiva e 2 sobe para junto do cesto.',
+'1 tem quatro opções de passe: 3, 4, 5 e 2.',
+'Tempo curto e necessidade de três pontos: lança o 3.',
+'Se houver troca defensiva: 3 passa a 5, que faz o passe extra a 2 no canto para três pontos.'
+]};
+</script>
+<script src="assets/motor.js"></script>
+</body>
+</html>

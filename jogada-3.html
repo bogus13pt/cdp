@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/cdp.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<title>Jogada 3 · Reposição na linha lateral</title>
+</head>
+<body>
+<main id="jogada"></main>
+<script>
+window.JOGADA={
+titulo:'Jogada 3 · Reposição na linha lateral',
+intro:'A reposição coloca a bola nas mãos do base penetrador, que recebe de imediato um bloqueio directo do poste.',
+inicio:{bola:3,c:'3 repõe a bola na linha lateral.',pos:{1:[248,64],2:[43,62],3:[379,239],4:[250,161],5:[145,66]}},
+fases:[
+{h:'Fase 1',c:'4 faz bloqueio indirecto a 1, que aproveita e corta para a bola.',a:[{m:4,to:[250,100],t:[0,.4],s:1},{m:1,to:[238,204],c:[200,150],t:[.3,1]}]},
+{h:'Fase 2',c:'3 repõe para 1; 4 desfaz o bloqueio e afunda.',a:[{p:1,t:[0,.45]},{m:3,to:[345,238],t:[.45,1]},{m:1,to:[255,224],t:[.45,1]},{m:4,to:[351,66],c:[320,125],t:[.2,1]}]},
+{h:'Fase 3',c:'5 sobe e bloqueia 1 assim que este recebe (bloqueio directo).',a:[{m:5,to:[232,194],c:[185,130],t:[0,1],s:1}]},
+{h:'Fase 4',c:'1 usa o bloqueio e penetra em drible; 5 desfaz o bloqueio para o cesto.',a:[{m:1,to:[160,132],c:[200,258],t:[0,1],d:1},{m:5,to:[205,100],t:[.35,1]}]}
+],
+perguntaAlternativas:'Leitura do base após o bloqueio directo',
+alternativas:[
+{rotulo:'Assiste 5',h:'Alternativa 1',c:'1 chama a defesa e assiste 5, que finaliza.',a:[{p:5,t:[0,.5]},{m:5,to:[198,82],t:[.5,.8]},{p:'B',t:[.8,1]}]},
+{rotulo:'Lança',h:'Alternativa 2',c:'Paragem a 1 tempo e lançamento, floater ou lançamento na passada.',a:[{m:1,to:[178,108],t:[0,.35]},{p:'B',c:[172,25],t:[.4,1]}]},
+{rotulo:'Passa a 2',h:'Alternativa 3',c:'A ajuda fecha em 1, que passa a 2 aberto no canto.',a:[{p:2,t:[0,1]}]}
+],
+resumo:[
+'4 faz bloqueio indirecto a 1, que aproveita e corta para a bola.',
+'3 repõe para 1; 4 desfaz o bloqueio e afunda para o canto.',
+'5 sobe e bloqueia 1 no momento em que este recebe.',
+'1 usa o bloqueio e penetra em drible; 5 desfaz o bloqueio para o cesto.',
+'1 decide após leitura: assiste 5, lança (paragem a 1 tempo, floater ou na passada) ou passa a 2.'
+]};
+</script>
+<script src="assets/motor.js"></script>
+</body>
+</html>

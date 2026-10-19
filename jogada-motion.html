@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/cdp.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<title>Jogada “Motion” · Cinco abertos</title>
+</head>
+<body>
+<main id="jogada"></main>
+<script>
+window.JOGADA={
+titulo:'Jogada “Motion” · Cinco abertos',
+intro:'Ataque com os cinco jogadores por fora da linha de três. O 3 passa ao 2 e fixa-se como bloqueador. O 4 e o 5 arrancam ao mesmo tempo na direcção do 3, passam colados a ele para os defensores ficarem presos no bloqueio, e cortam os dois para o cesto. Quem tem a bola (2) lê os cortes e a reacção da defesa.',
+inicio:{bola:3,c:'Cinco abertos: 5 no canto esquerdo, 4 na ala esquerda, 3 no topo, 2 na ala direita, 1 no canto direito.',pos:{1:[350,45],2:[311,170],3:[198,232],4:[85,170],5:[45,45]}},
+fases:[
+{h:'Fase 1',c:'3 passa a 2 e fixa-se entre o topo e a ala esquerda, pronto para bloquear.',a:[{p:2,t:[0,.55]},{m:3,to:[142,196],t:[.35,1],s:1}]},
+{h:'Fase 2',c:'4 e 5 arrancam ao mesmo tempo na direcção do 3, passam colados ao bloqueio e cortam para o cesto.',a:[{m:4,to:[188,112],c:[160,280],t:[0,.85]},{m:5,to:[165,66],c:[160,300],t:[.1,1]}]}
+],
+perguntaAlternativas:'Leitura de 2 (com bola) após os cortes',
+alternativas:[
+{rotulo:'4 finaliza',h:'Alternativa 1 · Corte do 4',c:'O defensor do 4 fica preso no bloqueio do 3. 2 passa a 4 no corte, que finaliza na passada.',a:[{p:4,t:[0,.5]},{p:'B',t:[.6,1]}]},
+{rotulo:'5 finaliza',h:'Alternativa 2 · Corte do 5',c:'A defesa acompanha o 4, mas o defensor do 5 fica no bloqueio. 2 passa a 5, que finaliza junto ao cesto.',a:[{m:4,to:[85,170],t:[0,.7]},{p:5,t:[.1,.6]},{p:'B',t:[.7,1]}]},
+{rotulo:'3 lança de 3',h:'Alternativa 3 · Defesa troca',c:'Os defensores trocam e o defensor do 3 desce para fechar os cortes. 3 recua para o topo, recebe de 2 e lança de três; 4 e 5 voltam a abrir.',a:[{m:3,to:[198,232],t:[0,.4]},{m:4,to:[85,170],t:[0,.8]},{m:5,to:[45,45],t:[0,.8]},{p:3,t:[.35,.7]},{p:'B',c:[198,110],t:[.75,1]}]},
+{rotulo:'1 lança de 3',h:'Alternativa 4 · Ajuda do canto',c:'O defensor do 1 desce para travar os cortes. 2 passa a 1, aberto no canto, que lança de três; 4 volta a abrir na ala.',a:[{m:4,to:[85,170],t:[0,.7]},{p:1,t:[0,.45]},{p:'B',c:[300,-15],t:[.55,1]}]},
+{rotulo:'2 penetra',h:'Alternativa 5 · Lado forte vazio',c:'Os cortes arrastam a ajuda para o lado fraco. 4 e 5 voltam a abrir e 2 ataca em drible pela linha de fundo e finaliza, ou assiste 1 se o defensor do canto fechar.',a:[{m:4,to:[85,170],t:[0,.6]},{m:5,to:[45,45],t:[0,.6]},{m:2,to:[232,88],c:[300,110],t:[.1,.8],d:1},{p:'B',t:[.82,1]}]}
+],
+resumo:[
+'Cinco abertos: 5, 4, 3, 2 e 1, da esquerda para a direita.',
+'3 passa a 2 e fixa-se como bloqueador entre o topo e a ala esquerda.',
+'4 e 5 arrancam ao mesmo tempo na direcção do 3, passam colados ao bloqueio e cortam para o cesto.',
+'2 lê e escolhe: 4 no corte, 5 no corte, 3 de três se a defesa trocar, 1 no canto se a ajuda descer, ou penetrar se o lado forte ficar vazio.',
+'Quem não recebe volta a abrir para recuperar os cinco abertos e repetir.'
+]};
+</script>
+<script src="assets/motor.js"></script>
+</body>
+</html>

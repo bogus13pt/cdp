@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/cdp.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/estilo.css">
+<title>Jogada 2 · Reposição na linha de fundo</title>
+</head>
+<body>
+<main id="jogada"></main>
+<script>
+window.JOGADA={
+titulo:'Jogada 2 · Reposição na linha de fundo',
+intro:'Reposição na linha de fundo com várias hipóteses de passe e concretização rápida. 1 e 2 são os jogadores mais baixos e rápidos; 4 e 5 os mais altos.',
+inicio:{bola:3,c:'3 repõe na linha de fundo. Os outros quatro em fila ao longo do garrafão: 4, 5, 2 e 1, do cesto para fora.',pos:{1:[243,151],2:[243,122],3:[255,8],4:[243,67],5:[243,95]}},
+fases:[
+{h:'Fase 1',c:'4 corta para o lado contrário da bola. 2 bloqueia 1, que corta por fora da área restritiva para o short corner.',a:[{m:4,to:[95,62],t:[0,.8]},{m:2,to:[246,140],t:[0,.35],s:1},{m:1,to:[262,72],c:[292,125],t:[.3,1]}]},
+{h:'Fase 2',c:'5 desce e bloqueia 2, que sai para o canto longo.',a:[{m:5,to:[245,122],t:[0,.4],s:1},{m:2,to:[335,78],c:[305,152],t:[.35,1]}]}
+],
+perguntaAlternativas:'Opções de passe para 3 (quem repõe)',
+alternativas:[
+{rotulo:'1 short corner',h:'Alternativa 1 · Short corner',c:'O defensor do 1 fica preso no bloqueio do 2. 3 passa a 1 no short corner, que finaliza.',a:[{p:1,t:[0,.45]},{p:'B',t:[.55,1]}]},
+{rotulo:'4 lado contrário',h:'Alternativa 2 · Distracção da defesa',c:'A defesa perde o 4 no corte para o lado contrário. É o primeiro passe: 3 passa a 4, que finaliza.',a:[{p:4,t:[0,.55]},{p:'B',t:[.65,1]}]},
+{rotulo:'5 rola',h:'Alternativa 3 · 5 para o cesto',c:'5 desfaz o bloqueio para o cesto. 3 passa a 5, que finaliza. Excelente passe para concretizar.',a:[{m:5,to:[200,80],t:[0,.45]},{p:5,t:[.4,.75]},{p:'B',t:[.8,1]}]},
+{rotulo:'2 canto longo',h:'Alternativa 4 · Canto longo',c:'5 rola para o cesto e arrasta a ajuda. 3 passa a 2 no canto longo, que lança de três. Atenção: ninguém fica para a recuperação defensiva.',a:[{m:5,to:[200,80],t:[0,.45]},{p:2,t:[.2,.6]},{p:'B',c:[300,0],t:[.65,1]}]},
+{rotulo:'5 abre (seguro)',h:'Alternativa 5 · Mais seguro',c:'5 desfaz o bloqueio para fora da área restritiva e fica no topo, como equilíbrio defensivo. 3 passa a 2 no canto longo, que lança ou devolve a 5 para jogo organizado.',a:[{m:5,to:[238,202],t:[0,.6]},{p:2,t:[.2,.6]},{p:5,t:[.68,1]}]}
+],
+resumo:[
+'4 corta para o lado contrário: em caso de distracção da defesa, é o primeiro passe.',
+'2 bloqueia 1, que corta por fora da área restritiva para o short corner: bom passe para concretizar.',
+'5 bloqueia 2, que sai para o canto longo, para lançar ou organizar o jogo.',
+'5 desfaz para o cesto (excelente passe) ou para fora da área restritiva (mais seguro na recuperação defensiva).',
+'Com 5 a rolar, ninguém fica para a recuperação defensiva.'
+]};
+</script>
+<script src="assets/motor.js"></script>
+</body>
+</html>
